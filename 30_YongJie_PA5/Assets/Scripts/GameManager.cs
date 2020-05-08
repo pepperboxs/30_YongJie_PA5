@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     {
         if (Score >= 4)
         {
-            YouWin();
+            NextStage();
         }
     }
 
@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
     {
         Score++;
         ScoreText.text = "Coins Collected = " + Score;
+    }
+
+    public void NextStage()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void YouWin()
