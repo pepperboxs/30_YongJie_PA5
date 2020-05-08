@@ -8,8 +8,12 @@ public class GameManager : MonoBehaviour
 {
     private float Score;
     public Text ScoreText;
+    private int level = 1;
 
-
+    private void Start()
+    {
+        level++;
+    }
     void Update()
     {
         if (Score >= 4)
@@ -26,8 +30,19 @@ public class GameManager : MonoBehaviour
 
     void YouWin()
     {
-        ScoreText.text = "You Win!";
-        SceneManager.LoadScene("GameWin");
+        if (Score == 4)
+        {
+            if (level == 1)
+            {
+                ScoreText.text = "You Win!";
+                SceneManager.LoadScene("GamePlay_Level2");
+                level++;
+            }
+            else if (level == 2)
+            {
+                SceneManager.LoadScene("YouWin");
+            }
+        }
     }
 
     public void YouLose()
