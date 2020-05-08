@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/GamePlay_Level1.unity
     guid: 2d2a273db56861e489de6237952e57ea
   - enabled: 1
-    path: Assets/Scenes/GameLose.unity
-    guid: 23396b09a96f6aa48bcffe0dcbeb1900
+    path: Assets/Scenes/GamePlay_Level2.unity
+    guid: f01166d323de7e040b3092663ab6cb28
   - enabled: 1
     path: Assets/Scenes/GameWin.unity
     guid: e93b2d95fa3980843871ba68efa53e3d
   - enabled: 1
-    path: Assets/Scenes/GamePlay_Level2.unity
-    guid: f01166d323de7e040b3092663ab6cb28
+    path: Assets/Scenes/GameLose.unity
+    guid: 23396b09a96f6aa48bcffe0dcbeb1900
   m_configObjects: {}

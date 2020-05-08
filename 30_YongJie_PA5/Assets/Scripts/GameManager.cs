@@ -8,17 +8,12 @@ public class GameManager : MonoBehaviour
 {
     private float Score;
     public Text ScoreText;
-    private int level = 1;
 
-    private void Start()
-    {
-        level++;
-    }
     void Update()
     {
         if (Score >= 4)
         {
-            YouWin();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -26,23 +21,6 @@ public class GameManager : MonoBehaviour
     {
         Score++;
         ScoreText.text = "Coins Collected = " + Score;
-    }
-
-    void YouWin()
-    {
-        if (Score == 4)
-        {
-            if (level == 1)
-            {
-                ScoreText.text = "You Win!";
-                SceneManager.LoadScene("GamePlay_Level2");
-                level++;
-            }
-            else if (level == 2)
-            {
-                SceneManager.LoadScene("YouWin");
-            }
-        }
     }
 
     public void YouLose()
